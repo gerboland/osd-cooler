@@ -1,0 +1,33 @@
+Cooler is a set of libraries made by Neuros that contain several utilities and our widget toolkit.
+It is split in 2 libraries:
+
+- 'libncooler-core.so' contains: generic shared routines for Neuros platform.
+- 'libncooler-media.so' contains: the client library for our NMSD media player daemon.
+
+
+To build and install library,
+   make cleanall all install
+
+The library will be installed to rootfs at $INSTALL_MOD_PATH/lib (usually neuros-bsp/rootfs/fs/lib).
+The libs also go to toolchain at $TOOLCHAIN_USR_INSTALL/usr/lib (usually neuros-bsp/toolchain/arm-linux/usr/lib).
+The headers will be installed into toolchain at $TOOLCHAIN_USR_INSTALL/usr/include/Neuros-Cooler/[core|neux|media].
+There are also pkgconfig packages installed in $TOOLCHAIN_USR_INSTALL/usr/lib/pkgconfig.
+
+
+WEB SITE
+========
+The main Neuros web site is at
+	http://www.neurostechnology.com/
+	http://open.neurostechnology.com/
+
+Various project information can be found at
+	http://www.theneuros.com/index.php/The_Neuros_and_Open_Source
+
+The chief maintainer of the project is 
+	Michael GAO <mgao@neurostechnology.com>
+
+
+MAILING LIST
+============
+This application is discussed on Google mailing list as
+	neuros@googlegroups.com

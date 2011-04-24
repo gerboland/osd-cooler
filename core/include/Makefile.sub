@@ -1,0 +1,15 @@
+# Makefile.sub for ./src/include
+
+
+# source modules, include all sub modules if any
+
+
+# update modules
+
+
+# source for current module only
+SRC_CORE += 
+
+
+# include the description for each sub module if any
+

@@ -1,0 +1,47 @@
+# Makefile.sub for ./src/core
+
+# source modules, include all sub modules if any
+ifeq ($(INCLUDE_TEST_CODE), YES)
+COOLER_DIR_TEST   := $(COOLER_DIR_SRC)/test
+
+COOLER_MODULES_SRC += $(COOLER_DIR_TEST) \
+                      $(COOLER_MODULES_TEST)
+endif
+
+# source for current module only
+SRC_CORE += ir-blaster.c \
+	list.c \
+	mac-sn.c \
+	system.c \
+	rtc.c \
+	storage.c \
+	led-control.c \
+	video-control.c \
+	fb.c \
+	file-helper.c \
+	pflash.c \
+	inifile.c \
+	watch-dog.c \
+	common.c \
+	dirbrowser.c \
+	i18n.c \
+	shared-mem.c \
+	ipc.c \
+	wget.c \
+	clipboard.c \
+	stack.c \
+	network-state.c \
+	location-watch.c \
+	run.c \
+	strlcpy.c \
+	strlcat.c \
+	kbd.c \
+	crc32.c \
+	fopen.c \
+	webclient.c \
+	upgrade.c
+
+# include the description for each sub module if any
+ifeq ($(INCLUDE_TEST_CODE), YES)
+include $(patsubst %,%/Makefile.sub,$(COOLER_MODULES_SRC))
+endif
